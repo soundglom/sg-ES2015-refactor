@@ -7,14 +7,14 @@ module.exports = {
         'webpack-dev-server/client?http://127.0.0.1:8080/',
         'webpack/hot/only-dev-server',
         'bootstrap-loader',
-        './src'
+        './client/app'
     ],
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js'
     },
     resolve: {
-        modulesDirectories: ['node_modules', 'src'],
+        modulesDirectories: ['node_modules', 'client/app'],
         extension: ['', '.js', '.scss']
     },
     module: { 

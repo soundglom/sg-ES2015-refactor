@@ -9,12 +9,12 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 // Used for production build
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client')));
 
 routes(app);
 
 app.all('/*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'dist/index.html'));
+    res.sendFile(path.join(__dirname, 'client/index.html'));
 });
 
 app.listen(PORT, function() {

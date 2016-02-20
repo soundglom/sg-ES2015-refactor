@@ -4,14 +4,14 @@ var path = require('path');
 module.exports = {
   entry: [
       'bootstrap-loader',
-      './src'
+      './client'
   ],
   output: {
       path: path.join(__dirname, 'dist'),
       filename: 'bundle.js'
   },
   resolve: {
-      modulesDirectories: ['node_modules', 'src'],
+      modulesDirectories: ['node_modules', 'client'],
       extension: ['', '.js', '.scss']
   },
   module: {
